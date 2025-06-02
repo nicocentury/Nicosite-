@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nicolas Fournier – Agent Immobilier</title>
+  <style>
+    :root {
+      --color-bg: #fff;
+      --color-text: #000;
+      --color-primary: #f1c40f;
+      --color-secondary: #333;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      transition: all 0.3s ease-in-out;
+    }
+
+    header {
+      padding: 2rem;
+      background-color: var(--color-primary);
+      color: var(--color-secondary);
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    nav button {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    input, textarea {
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--color-secondary);
+      color: white;
+    }
+
+    .mode-sobre {
+      --color-bg: #ffffff;
+      --color-text: #000000;
+      --color-primary: #f1c40f;
+      --color-secondary: #333333;
+    }
+
+    .mode-colore {
+      --color-bg: #fdf6e3;
+      --color-text: #2d2d2d;
+      --color-primary: #f1c40f;
+      --color-secondary: #2c3e50;
+    }
+
+    .mode-dark {
+      --color-bg: #1e1e1e;
+      --color-text: #f0f0f0;
+      --color-primary: #f1c40f;
+      --color-secondary: #111;
+    }
+  </style>
+</head>
+<body class="mode-sobre">
+
+  <header>
+    <h1>Nicolas Fournier</h1>
+    <p>Agent immobilier chez Century 21 – Pour une relation gagnant-gagnant entre client et professionnel</p>
+  </header>
+
+  <nav>
+    <button onclick="setTheme('mode-sobre')">Sobre</button>
+    <button onclick="setTheme('mode-colore')">Coloré</button>
+    <button onclick="setTheme('mode-dark')">Dark Mode</button>
+  </nav>
+
+  <section id="a-propos">
+    <h2>À propos</h2>
+    <p>Je suis Nicolas Fournier, agent immobilier passionné chez Century 21. 
+    Mon objectif est simple : créer une relation de confiance et d’écoute entre vous et moi. 
+    Ensemble, nous construisons un parcours immobilier fondé sur l’entraide, la transparence et la réussite commune.</p>
+  </section>
+
+  <section id="services">
+    <h2>Mes services</h2>
+    <p>• Estimation précise et gratuite de votre bien
+
+    • Accompagnement personnalisé à chaque étape
+
+    • Mise en valeur professionnelle de vos biens (photos, visites virtuelles)
+
+    • Suivi régulier et retour client clair
+
+    • Conseil sur les aspects juridiques, fiscaux et financiers</p>
+  </section>
+
+  <section id="avantages-century">
+    <h2>Pourquoi Century 21 ?</h2>
+    <p>Century 21, c’est plus de 900 agences en France et une notoriété inégalée. 
+    Nous vous offrons une visibilité maximale, un réseau fiable, des outils modernes et une expertise reconnue depuis plus de 30 ans. 
+    En travaillant avec moi et Century 21, vous faites le choix d’un partenaire solide et humain.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form action="https://formsubmit.co/nicolas.fournier@century21.fr" method="POST">
+      <input type="text" name="nom" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre e-mail" required>
+      <textarea name="message" placeholder="Votre message..." required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Nicolas Fournier – Agent immobilier chez Century 21</p>
+  </footer>
+
+  <script>
+    function setTheme(mode) {
+      document.body.className = mode;
+    }
+  </script>
+</body>
+</html>
